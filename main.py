@@ -21,12 +21,11 @@ if s_l == "p":
   ) as app:
     session_str = app.export_session_string()
     s_m = app.send_message("me", session_str)
-    s_m.reply_text("⬆️ This StringSession is generated using https://GenerateStringSession.SpEcHIDe.repl.run \nPlease subscribe @UniBorg ", quote=True)
+    s_m.reply_text("⬆️ This StringSession is generated ", quote=True)
     print("please check your Telegram Saved Messages for the StringSession ")
 
 elif s_l == "t":
   print("you selected Telethon")
-  # (c) https://t.me/TelethonChat/37677
   from telethon.sync import TelegramClient
   from telethon.sessions import StringSession
   APP_ID = int(input("Enter APP ID here: "))
@@ -38,7 +37,7 @@ elif s_l == "t":
   ) as client:
     session_str = client.session.save()
     s_m = client.send_message("me", session_str)
-    s_m.reply("⬆️ This StringSession is generated using https://GenerateStringSession.SpEcHIDe.repl.run! \nPlease subscribe @UniBorg ")
+    s_m.reply("⬆️ This StringSession is generated")
     print("please check your Telegram Saved Messages for the StringSession ")
 
 else:
